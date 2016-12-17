@@ -43,27 +43,25 @@ var userSchema = mongoose.Schema({
     },
     swampScore:{
     	type: Number
-    }
-
-	// zhistory: {[
-	// 	"Beach": {
-	// 		question: Number,
-	// 		score: Number
-	// 	},
-	// 	"Mansion": {
-	// 		question: Number,
-	// 		score: Number
-	// 	},
-	// 	"Swamp": {
-	// 		question: 1,
-	// 		score: 4
-	// 	},
-	// 	"Snow": {
-	// 		question: Number,
-	// 		score: Number
-	// 	}
-	// ]}
-	
+    },
+	snowQuestion: {
+		type:Number	
+	},	
+	snowScore: {
+		type: Number
+	},
+	mansionQuestion: {
+		type:Number	
+	},	
+	mansionScore: {
+		type: Number
+	},
+	BeachQuestion: {
+		type:Number	
+	},	
+	BeachScore: {
+		type: Number
+	},	
 });	
 	
 	
