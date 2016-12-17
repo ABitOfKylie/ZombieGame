@@ -14,6 +14,10 @@ h1 {font-family: 'Creepster', cursive;
   color: #fff;
   margin-top: 250px;
 }
+#signinh{	
+  font-size: 100px;  
+  margin-top: -100px;
+}
 
 p{
 	font-family: 'Creepster', cursive;
@@ -30,31 +34,20 @@ p{
 }
 
 
-#clickclack {
+.stylebtn {
+	background-color: transparent;
+	font-size: 25px;
+	color: red;
 	font-family: 'Creepster', cursive;
-	padding: 10px;
+
 	
-	background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: 30px;
-    color: red;
 }
 
-#clickclack:hover {
+.stylebtn:hover {
+	color: #fff;
+	background-color:rgb(52, 68, 13); 
 	font-family: 'Creepster', cursive;
-	padding: 10px;
 	
-	background-color: #535c1c;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: #fff;
 }
 
 
@@ -232,8 +225,9 @@ margin-top: 15%;
 
 .talkwords{
 	margin-top: 20px;
-	font-size: 20px;
+	
 	margin-bottom: 2px;
+	color: #151515;
 
 }
 
@@ -295,54 +289,30 @@ margin-top: 15%;
 
 }
 
-a.button,{
-	margin-left: 40%;
-	text-align: center;
-}
 
-a.button:hover{
-	margin-left: 40%;
-	text-align: center;
-}
 .liltext{
 text-align: center;
 color: #fff;
 }
-.loginbtn{
-	font-family: 'Creepster', cursive;
-	padding: 10px;
-	margin: 3px;
-	background-color: #535c1c;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: red;
-margin-left: 35%;
-}
-.loginbtn:hover{
-margin-left: 35%;
-font-family: 'Creepster', cursive;
-	padding: 10px;
-	margin: 3px;
-	background-color: #535c1c;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    color: #fff;
-}
+
 
 #signinforms2{
 	margin-top: 10%;
 }
 
 #zwordsnow{
-	font-size: 20px;
+	
 	color: #fff;
 	margin-left: 0%;
+	background-color:transparent; 
+	margin: 0px;
+	font-size: 15px
+}
+#zwordsnow:hover{
+	
+	color: #fff;
+	margin-left: 0%;
+	background-color:rgb(52, 68, 13); 
 }
 
 .love{
@@ -366,23 +336,8 @@ font-family: 'Creepster', cursive;
 
 label{
 	font-family: 'Creepster', cursive;
-	text-align: center;
 	color: #fff;
-	font-size: 25px;
-
-}
-
-#zso{
-	margin-left: 0px;
-	margin-top: 10px;
-
-}
-#zsi{
-	margin-right: 115px;
+	font-size: 20px;
 	
-}
 
-#lastthing{
-	margin-right: 60px;
-	
 }
