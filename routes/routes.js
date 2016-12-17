@@ -36,7 +36,7 @@ module.exports = function(app) {
                 })
             })
             // console.log(req.body);
-            res.redirect('/signup');
+            res.redirect('/zChoice');
         });
 
         app.get('/signin', function(req, res) {
@@ -56,8 +56,7 @@ module.exports = function(app) {
                     bcrypt.compare(req.body.password, result.password, function(err, result) {
                         console.log(result);
                         if(err) res.redirect('/signin');
-                        alert("nope - try again");
-
+                       
                         return res.redirect('/zChoice');
                     })
                 }
@@ -65,9 +64,9 @@ module.exports = function(app) {
         });
 
 
-        app.get('/logout', function(req, res) {
-            req.logout();
-            res.redirect('/');
+        app.get('/end', function(req, res) {
+            res.render('end');
+            
         });
 
 
@@ -75,7 +74,13 @@ module.exports = function(app) {
             res.render('zChoice');
         });
         app.get("/snow", function(req, res) {
-    		res.render('snow');
+    		res.render('snow',{
+                Question: zCollection.zombie2.questions[0].question,
+                answer1: zCollection.zombie2.questions[0].responses[0].response,
+                answer2: zCollection.zombie2.questions[0].responses[1].response,
+                answer3: zCollection.zombie2.questions[0].responses[2].response,
+                answer4: zCollection.zombie2.questions[0].responses[3].response
+            });
 		});
 
 		app.get("/swamp", function( req, res){
@@ -89,10 +94,22 @@ module.exports = function(app) {
 		}); 
 
 		app.get("/beach", function(req, res) {
-		    res.render('beach');
+		    res.render('beach',{
+                Question: zCollection.zombie4.questions[0].question,
+                answer1: zCollection.zombie4.questions[0].responses[0].response,
+                answer2: zCollection.zombie4.questions[0].responses[1].response,
+                answer3: zCollection.zombie4.questions[0].responses[2].response,
+                answer4: zCollection.zombie4.questions[0].responses[3].response
+            });
 		});
 		app.get("/mansion", function(req, res) {
-		    res.render('mansion');
+		    res.render('mansion',{
+                Question: zCollection.zombie3.questions[0].question,
+                answer1: zCollection.zombie3.questions[0].responses[0].response,
+                answer2: zCollection.zombie3.questions[0].responses[1].response,
+                answer3: zCollection.zombie3.questions[0].responses[2].response,
+                answer4: zCollection.zombie3.questions[0].responses[3].response
+            });
 		});
 
 }; //this is final closing bracket -

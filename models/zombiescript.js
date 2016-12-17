@@ -8,10 +8,10 @@
     locationImage: "url",
     questions: [
       {
-        question: "Well, awrite dere. I’m surprised to see someone of your… gender walking around here. Most are too screamish to go into da swamp. Ah! Where are my manners? Please excuse me. I’m Jago. Who might you be?",
+        question: "Well, awrite dere. I’m surprised to see someone of your… gender walking around here. Most are too screamish to go into da swamp. Ah! Where are my manners? Please excuse me. I’m Jago.",
           responses: [
           {
-            response: "[Player name], a pleasure to meet you.",
+            response: "A pleasure to meet you.",
             value: 10
           }, {
             response: "Not that you deserve to know but it’s [Player name].",
