@@ -8,13 +8,13 @@
     locationImage: "url",
     questions: [
       {
-        question: "Well, awrite dere. I’m surprised to see someone of your… gender walking around here. Most are too screamish to go into da swamp. Ah! Where are my manners? Please excuse me. I’m Jago. Who might you be?",
+        question: "Well, awrite dere. I’m surprised to see someone of your… gender walking around here. Most are too screamish to go into da swamp. Ah! Where are my manners? Please excuse me. I’m Jago.",
           responses: [
           {
-            response: "[Player name], a pleasure to meet you.",
+            response: "A pleasure to meet you.",
             value: 10
           }, {
-            response: "Not that you deserve to know but it’s [Player name].",
+            response: "Not that you deserve to know but it’s Sir .",
             value: 5
           }, {
             response: "I don’t tell swamp creeps my name.",
@@ -180,14 +180,14 @@
       }
     ]
   },
- zombie2: {
-    name: "SnowZombie",
-    description: "",
-    image: "url",
-    locationName: "Snow",
-    locationImage: "url",
-    questions: [
-      {
+   zombie2: {
+      name: "SnowZombie",
+      description: "",
+      image: "url",
+      locationName: "Snow",
+      locationImage: "url",
+      questions: [
+        {
         question: "Graaawwrrr!!!",
           responses: [
           {
@@ -364,7 +364,7 @@
   
     ]
   },
-        zombie3: {
+    zombie3: {
     name: "MansionZombie",
     description: "",
     image: "url",
@@ -375,13 +375,13 @@
         question: "Hello and welcome to my humble mansion. I am Yin. Who might you be?",
         responses: [
           {
-            response: "Not that you deserve to know, but I am [Player name]",
+            response: "Not that you deserve to know, but I am who I am",
             value: 10
           }, {
-            response: "I’m [Player name], nice to meet you",
+            response: "I’m charmed, nice to meet you",
             value: 5
           }, {
-            response: "[Player name]. Humble huh? Doesn’t look humble to me",
+            response: "Rumble, Humble. Humble huh? Doesn’t look humble to me",
             value: -5
           }, {
             response: "Someone who needs to pee really badly",
