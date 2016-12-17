@@ -342,9 +342,23 @@ margin-left: 35%;
 #music{
 	font-family: 'Creepster', cursive;
 	padding: 10px;
-	}
+	margin: 3px;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 30px;
+    color: red;
+    margin-left: 20px;
 
-#upButton{
-	color:lime;
-	background:white;
+}
+
+label{
+	font-family: 'Creepster', cursive;
+	text-align: center;
+	color: #fff;
+	font-size: 25px;
+
 }

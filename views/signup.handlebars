@@ -1,10 +1,11 @@
-<div class="row">
-   <div><img  id="logo" src="public/img/LITAlogo.gif"></div>
-    <div class="large-6 columns">
+  <div class="row">
+   <div><img  class="logo" src="img/LITAlogo.gif"></div>
+    <div class="large-6 columns large-pull-3">
       <div class="signup-panel" "upBackground">
-        <p class="welcome"> Welcome to this awesome app!</p>
+        <h1 id="signupheader"> Sign up</h1>
 
-        <h1 class = "upHeader"><span class="fa 
+          <!-- show any messages that come back with authentication -->
+          
 
   <form action="/signUp" method="post">
     <div class="form-group">
@@ -20,21 +21,19 @@
       <input type="password" class="form-control" id="password" name="password">
     </div>
     <div class="form-group">
-        <label>confirmPassword</label>
+        <label>confirm Password</label>
         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
       </div>
 
-          <button type = "submit" class="btn btn-warning btn-lg"></button>
 
   </form>
 
-  <hr>
-          
-<!-- alt to button submit above <a href="#" class="button ">Local Sign Up! </a> -->
+          <a href="/signUP" class="button" id="loginbtn">Local Sign Up! </a>
+          <a href="/auth/facebook" class="button" class="fc-webicon facebook large">Facebook </a>
+         
+            <p class="liltext">Already have an account? <a href="/signin">Sign In</a></p>
+            <p class="liltext">Or go <a href="/">home</a>.</p>
 
- <!-- <button type="submit" class="btn btn-warning btn-lg" id="upButton">Local Signup</button>  -->               
-            <p>Already have an account? <a href="/signin">Sign In</a></p>
-            <p>Or go <a href="/">home</a>.</p>
     </div>
   </div>
  </div>
