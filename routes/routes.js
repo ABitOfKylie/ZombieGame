@@ -36,7 +36,7 @@ module.exports = function(app) {
                 })
             })
             // console.log(req.body);
-            res.redirect('/signup');
+            res.redirect('/zChoice');
         });
 
         app.get('/signin', function(req, res) {
@@ -56,7 +56,6 @@ module.exports = function(app) {
                     bcrypt.compare(req.body.password, result.password, function(err, result) {
                         console.log(result);
                         if(err) res.redirect('/signin');
-                        alert("nope - try again");
 
                         return res.redirect('/zChoice');
                     })
@@ -75,8 +74,14 @@ module.exports = function(app) {
             res.render('zChoice');
         });
         app.get("/snow", function(req, res) {
-    		res.render('snow');
-		});
+    		res.render('snow',{
+            Question: zCollection.zombie2.questions[0].question,
+                answer1: zCollection.zombie2.questions[0].responses[0].response,
+                answer2: zCollection.zombie2.questions[0].responses[1].response,
+                answer3: zCollection.zombie2.questions[0].responses[2].response,
+                answer4: zCollection.zombie2.questions[0].responses[3].response
+		      });
+        });
 
 		app.get("/swamp", function( req, res){
 			res.render('swamp',{
