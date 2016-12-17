@@ -2,7 +2,6 @@ var User = require('../models/user');
 var bcrypt = require('bcrypt');
 var zCollection = require('../models/zombiescript')
 var salt = 10;
-// var Zombies = require('..models/zombiescript')
 module.exports = function(app) {
         app.get('/', function(req, res) {
             res.render('home');
@@ -35,16 +34,12 @@ module.exports = function(app) {
                     })
                 })
             })
-            // console.log(req.body);
+
             res.redirect('/zChoice');
         });
 
         app.get('/signin', function(req, res) {
-            // res.render('signin', { message: req.flash('signinMessage') });
             res.render('signin');
-
-            // 	if signin successful then res.redirect('/zChoice');
-            // });
         });
         app.post('/signin', function(req, res) {
             User.findOne({email: req.body.email}, function(err, result) {
@@ -56,7 +51,7 @@ module.exports = function(app) {
                     bcrypt.compare(req.body.password, result.password, function(err, result) {
                         console.log(result);
                         if(err) res.redirect('/signin');
-                       
+
                         return res.redirect('/zChoice');
                     })
                 }
@@ -66,7 +61,7 @@ module.exports = function(app) {
 
         app.get('/end', function(req, res) {
             res.render('end');
-            
+
         });
 
 
@@ -80,8 +75,11 @@ module.exports = function(app) {
                 answer2: zCollection.zombie2.questions[0].responses[1].response,
                 answer3: zCollection.zombie2.questions[0].responses[2].response,
                 answer4: zCollection.zombie2.questions[0].responses[3].response
+
             });
-		});
+		
+        });
+
 
 		app.get("/swamp", function( req, res){
 			res.render('swamp',{
@@ -95,20 +93,26 @@ module.exports = function(app) {
 
 		app.get("/beach", function(req, res) {
 		    res.render('beach',{
+
                 Question: zCollection.zombie4.questions[0].question,
                 answer1: zCollection.zombie4.questions[0].responses[0].response,
                 answer2: zCollection.zombie4.questions[0].responses[1].response,
                 answer3: zCollection.zombie4.questions[0].responses[2].response,
                 answer4: zCollection.zombie4.questions[0].responses[3].response
+
             });
 		});
 		app.get("/mansion", function(req, res) {
 		    res.render('mansion',{
+
                 Question: zCollection.zombie3.questions[0].question,
                 answer1: zCollection.zombie3.questions[0].responses[0].response,
                 answer2: zCollection.zombie3.questions[0].responses[1].response,
                 answer3: zCollection.zombie3.questions[0].responses[2].response,
                 answer4: zCollection.zombie3.questions[0].responses[3].response
+
+            
+
             });
 		});
 

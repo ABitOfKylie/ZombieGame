@@ -14,7 +14,7 @@
             response: "A pleasure to meet you.",
             value: 10
           }, {
-            response: "Not that you deserve to know but it’s [Player name].",
+            response: "Not that you deserve to know but it’s Sir .",
             value: 5
           }, {
             response: "I don’t tell swamp creeps my name.",
@@ -180,14 +180,14 @@
       }
     ]
   },
- zombie2: {
-    name: "SnowZombie",
-    description: "",
-    image: "url",
-    locationName: "Snow",
-    locationImage: "url",
-    questions: [
-      {
+   zombie2: {
+      name: "SnowZombie",
+      description: "",
+      image: "url",
+      locationName: "Snow",
+      locationImage: "url",
+      questions: [
+        {
         question: "Graaawwrrr!!!",
           responses: [
           {
@@ -363,5 +363,366 @@
       }
   
     ]
+  },
+    zombie3: {
+    name: "MansionZombie",
+    description: "",
+    image: "url",
+    locationName: "Mansion",
+    locationImage: "url",
+    questions: [
+      {
+        question: "Hello and welcome to my humble mansion. I am Yin. Who might you be?",
+        responses: [
+          {
+            response: "Not that you deserve to know, but I am who I am",
+            value: 10
+          }, {
+            response: "I’m charmed, nice to meet you",
+            value: 5
+          }, {
+            response: "Rumble, Humble. Humble huh? Doesn’t look humble to me",
+            value: -5
+          }, {
+            response: "Someone who needs to pee really badly",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Hm, yes. Well, you must be tired from your travels. You can rest here if you like.",
+        responses: [
+          {
+            response: "I suppose I could. I always wanted a room made for a queen.",
+            value: 10
+          }, {
+            response: "Ah! Please if you don’t mind!",
+            value: 5
+          }, {
+            response: "I guess I could. This place is clean right? ",
+            value: -5
+          }, {
+            response: "What I need is a bathroom!",
+            value: -10
+          }
+        ]
+      }, {
+        question: "It’s decided then. It’ll be nice to finally have some company.",
+        responses: [
+          {
+            response: "You should be honored by my very presents before you.",
+            value: 10
+          }, {
+            response: "Thank you! I really appreciate having some place nice to sleep and someone to talk to.",
+            value: 5
+          }, {
+            response: "Eh, I guess.",
+            value: -5
+          }, {
+            response: "Um… ignore that puddle by my feet. Also I don’t need to use the restroom anymore",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Please tell me about yourself.",
+        responses: [
+          {
+            response: "I suppose I could tell you a little about myself. I’m a girl who has high taste and so far this is the only place I could find that remotely comes close to my standards",
+            value: 10
+          }, {
+            response: "Me? Oh well there’s nothing special about me. Just trying to find myself a new home after what happened.",
+            value: 5
+          }, {
+            response: "I much rather know why you’re hopping so much",
+            value: -5
+          }, {
+            response: "I don’t normally pee my pants for one...",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Is that so. Interesting. Yes very interesting.",
+        responses: [
+          {
+            response: "Of course I’m interesting. I’m the best thing that’s ever happened to you.",
+            value: 10
+          }, {
+            response: "You think so? You’re the first to think so",
+            value: 5
+          }, {
+            response: "What? The hopping? I say it’s more of odd but whatever",
+            value: -10
+          }, {
+            response: "Yes… not peeing pants is nice… ",
+            value: -5
+          }
+        ]
+      }, {
+        question: "Forgive me for being so bold, but, what would you think about staying here… permanently? ",
+        responses: [
+          {
+            response: "Hmmm…. I suppose I could lower my standards enough to stay. ",
+            value: 10
+          }, {
+            response: "What?! Really?! You’ll let me stay here?!",
+            value: 5
+          }, {
+            response: "I… don’t know. You’re kinda creepy.",
+            value: -10
+          }, {
+            response: "As long as I know where the bathrooms are at all times, then sure.",
+            value: -5
+          }
+        ]
+      }, {
+        question: "Excellent. Most excellent. ",
+        responses: [
+          {
+            response: "Don’t talk to yourself. It’s displeases me.",
+            value: 10
+          }, {
+            response: "I can’t thank you enough. It’s going to be so nice to have a home again.",
+            value: 5
+          }, {
+            response: "Ummm…. What’s excellent?",
+            value: -10
+          }, {
+            response: "So, do you have a map of this place or what?",
+            value: -5
+          }
+        ]
+      }, {
+        question: "I think you’ll like living here very much. I know I will.",
+        responses: [
+          {
+            response: "We’ll just see about that.",
+            value: 10
+          }, {
+            response: "I’m sure I’ll love it here! How could I not?",
+            value: 5
+          }, {
+            response: "Why are you looking at me like that?",
+            value: -10
+          }, {
+            response: "I love any place that has the basic to a comfortable life!",
+            value: -5
+          }
+        ]
+      }, {
+        question: "Please, come closer my dear.",
+        responses: [
+          {
+            response: "I suppose, but no touching.",
+            value: 10
+          }, {
+            response: "Of course!",
+            value: 5
+          }, {
+            response: "Can I get some new clothes before we cuddle?",
+            value: -5
+          }, {
+            response: "No thanks.",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Yes, you are perfect.",
+        responses: [
+          {
+            response: "Of course I am! How dare you ever doubt that!",
+            value: 10
+          }, {
+            response: "You… You really think so?",
+            value: 5
+          }, {
+            response: "….Seriously?",
+            value: -5
+          }, {
+            response: "Please don’t eat me!!",
+            value: -10
+          }
+        ]
+      }
+    ]
+  },
+  zombie4: {
+    name: "BeachZombie",
+    description: "",
+    image: "url",
+    locationName: "Beach",
+    locationImage: "url",
+    questions: [
+      {
+        question: "Ah! Hello, hello! What is a pretty thing like you doing here?",
+        responses: [
+          {
+            response: "Just trying out my new super revealing swimwear.",
+            value: 10
+          }, {
+            response: "Just enjoying the sun.",
+            value: 5
+          }, {
+            response: "Just standing here honestly.",
+            value: -5
+          }, {
+            response: "Well this is a beach...so yeah",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Such a pretty thing should be alone on such a nice day. Why don’t I join you?",
+        responses: [
+          {
+            response: "Oh, please do~",
+            value: 10
+          }, {
+            response: "Ummm… okay?",
+            value: 5
+          }, {
+            response: "I would prefer if you didn’t.",
+            value: -5
+          }, {
+            response: "How about no?",
+            value: -10
+          }
+        ]
+      }, {
+        question: "You are very pretty. Did you know that? I like the tall ladies.",
+        responses: [
+          {
+            response: "Do you now? What good luck.",
+            value: 10
+          }, {
+            response: "Yeah… guess I’m kinda tall.",
+            value: 5
+          }, {
+            response: "Wow, yeah… too close.",
+            value: -5
+          }, {
+            response: "I’m not tall, you’re just freakishly short.",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Ah yes, this is very nice. So nice.",
+        responses: [
+          {
+            response: "How lucky I am to have such a handsome zombie like you here with me.",
+            value: 10
+          }, {
+            response: "I guess?",
+            value: 5
+          }, {
+            response: "Yeah… no it’s not.",
+            value: -5
+          }, {
+            response: "Get away from me!",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Do you have any nice tattoos? ",
+        responses: [
+          {
+            response: "Oh yes, but you’ll have to go looking for them handsome.",
+            value: 10
+          }, {
+            response: "Nope, though I always wanted one.",
+            value: 5
+          }, {
+            response: "I’m scared of needles so… no.",
+            value: -5
+          }, {
+            response: "No…",
+            value: -10
+          }
+        ]
+      }, {
+        question: "I know of a very nice place for tattoos. Nothing but pure artistry is placed on the skin.",
+        responses: [
+          {
+            response: "Really? I’ll have to go some time.",
+            value: 10
+          }, {
+            response: "Huh, I might go.",
+            value: 5
+          }, {
+            response: "Eehhhh… ",
+            value: -5
+          }, {
+            response: "No. ",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Why don’t I take you there? It’s not far.",
+        responses: [
+          {
+            response: "Ohhhh~ I would like that.",
+            value: 10
+          }, {
+            response: "How far is not far?",
+            value: 5
+          }, {
+            response: "I dunno…",
+            value: -5
+          }, {
+            response: "What part of no are you not getting here?",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Yes! Let us go there. I will get you the best tattoo money can buy!",
+        responses: [
+          {
+            response: "Really?! Oh I would love that! ",
+            value: 10
+          }, {
+            response: "What? Really? You’d do that for me? Wow!",
+            value: 5
+          }, {
+            response: "I don’t think I can accept.",
+            value: -5
+          }, {
+            response: "I’m not going anywhere with you, you walking skin bag!",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Yes it will be good time! Come! Come!",
+        responses: [
+          {
+            response: "Oh I’m sure we’ll have a great time handsome.",
+            value: 10
+          }, {
+            response: "Um… okay! Coming!",
+            value: 5
+          }, {
+            response: "No… I think I’ll stay here.",
+            value: -5
+          }, {
+            response: "Don’t make be pepper spray you freak! ",
+            value: -10
+          }
+        ]
+      }, {
+        question: "Today, today is a good day for Riko.",
+        responses: [
+          {
+            response: "Oh, it’s only starting handsome. It only gets better from here",
+            value: 10
+          }, {
+            response: "Yay?",
+            value: 5
+          }, {
+            response: "I wish I could say the same,",
+            value: -5
+          }, {
+            response: "I said stay away!!",
+            value: -10
+          }
+        ]
+      }
+    ]
   }
 };
+
