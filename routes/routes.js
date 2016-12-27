@@ -1,4 +1,5 @@
 var User = require('../models/user');
+var express = require('express');
 var bcrypt = require('bcrypt');
 var zCollection = require('../models/zombiescript')
 var salt = 10;
@@ -6,40 +7,32 @@ module.exports = function(app) {
         app.get('/', function(req, res) {
             res.render('home');
         });
+
         app.get('/signup', function(req, res) {
             res.render('signup');
-         // following validator-style   
-         // res.render('signUp',{title:Form Validation, success: req.session.success; errors: req.session.errors});
-         // req.session.errors = null;
-
         });
 
 
-        app.post('/signup', function(req, res) {
-            // following belongs to validator
-            // req.check('email','Invalid email address').isEmail();
-            // req.check('password' "Password is invalid").isLength({min:4}).equals(req.body.confirmPassword);
-
-            var errors = req.validationErrors();
-            if(errors){
-                req.session.errors = errors;
-            }
+         app.post('/signup', function(req, res) {
             var user = new User({username: req.body.username, email: req.body.email});
             bcrypt.genSalt(salt, function(err, salt) {
                 bcrypt.hash(req.body.password, salt, function(err, hash) {
                     user.password = hash;
-                    user.save(function(err, res) {
+                    user.save(function(err, response) {
                         if (err) throw err;
                         console.log('We saved: ', res);
-                    })
-                })
-            })
-            res.redirect('/zChoice');
+                        res.redirect('/zChoice');
+                    });
+                });
+            });
         });
+
+    
 
         app.get('/signin', function(req, res) {
             res.render('signin');
         });
+
         app.post('/signin', function(req, res) {
             User.findOne({email: req.body.email}, function(err, result) {
                 console.log(err, result);
@@ -67,15 +60,8 @@ module.exports = function(app) {
         app.get("/zChoice", function(req, res) {
             res.render('zChoice');
         });
-        app.get("/snow", function(req, res) {
-    		res.render('snow',{
-            Question: zCollection.zombie2.questions[0].question,
-                answer1: zCollection.zombie2.questions[0].responses[0].response,
-                answer2: zCollection.zombie2.questions[0].responses[1].response,
-                answer3: zCollection.zombie2.questions[0].responses[2].response,
-                answer4: zCollection.zombie2.questions[0].responses[3].response
-		      });
-        });
+        
+
 
 		app.get("/swamp", function( req, res){
 			res.render('swamp',{
@@ -87,22 +73,42 @@ module.exports = function(app) {
 			});
 		}); 
 
+        app.get('/questionFill', function(req, res){
+            User.find(swampQuestion, callback)
+
+
+        });
+
+        app.get("/snow", function(req, res) {
+            res.render('snow',{
+                Question:zCollection.zombie2.questions[0].question,
+                answer1: zCollection.zombie2.questions[0].responses[0].response,
+                answer2: zCollection.zombie2.questions[0].responses[1].response,
+                answer3: zCollection.zombie2.questions[0].responses[2].response,
+                answer4: zCollection.zombie2.questions[0].responses[3].response
+
+            });
+        
+        });
+
+        app.get("/mansion", function(req, res) {
+            res.render('mansion',{
+                Question: zCollection.zombie3.questions[0].question,
+                answer1: zCollection.zombie3.questions[0].responses[0].response,
+                answer2: zCollection.zombie3.questions[0].responses[1].response,
+                answer3: zCollection.zombie3.questions[0].responses[2].response,
+                answer4: zCollection.zombie3.questions[0].responses[3].response
+
+            });
+        });
 		app.get("/beach", function(req, res) {
 		    res.render('beach',{
-                Question: zCollection.zombie1.questions[0].question,
-                answer1: zCollection.zombie1.questions[0].responses[0].response,
-                answer2: zCollection.zombie1.questions[0].responses[1].response,
-                answer3: zCollection.zombie1.questions[0].responses[2].response,
-                answer4: zCollection.zombie1.questions[0].responses[3].response
-            });
-		});
-		app.get("/mansion", function(req, res) {
-		    res.render('mansion',{
-                Question: zCollection.zombie1.questions[0].question,
-                answer1: zCollection.zombie1.questions[0].responses[0].response,
-                answer2: zCollection.zombie1.questions[0].responses[1].response,
-                answer3: zCollection.zombie1.questions[0].responses[2].response,
-                answer4: zCollection.zombie1.questions[0].responses[3].response
+                Question: zCollection.zombie4.questions[0].question,
+                answer1: zCollection.zombie4.questions[0].responses[0].response,
+                answer2: zCollection.zombie4.questions[0].responses[1].response,
+                answer3: zCollection.zombie4.questions[0].responses[2].response,
+                answer4: zCollection.zombie4.questions[0].responses[3].response
+
             });
 		});
 

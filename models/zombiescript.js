@@ -23,7 +23,8 @@
             response: "Rot off, moss brain!",
             value: -10
           }
-        ]
+        ],
+        questionNumber:1
       }, {
         question: "Ah well it’s nice to meet you, heh. I don’t get many visitors here in my swamp.",
         responses: [

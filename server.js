@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 // const passport = require('passport');
-// const expressValidator = require('express-validator')
-
+// const validator = require('express-validator')
+// const routes = require('./routes/routes.js')(app);
 // *******************
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,27 +20,36 @@ app.set('view engine', 'handlebars');
 // use morgan to log requests to the console 
 app.use(morgan('dev'));
 app.use(cookieParser('secret string')); // session used to require cookie parser, after ver. 1.?, no longer required
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true})); // many examples: pluralsight incl. use false
 app.use(bodyParser.json());
+// app.use(validator());
+// app.use('/', routes);
+// *******************DB Connection Set Up // how do you do both/either local host and heroku host
 
-// *******************
+mongoose.connect("mongodb://localhost:27017/loveTest");
+var db = mongoose.connection;
+console.log(db, "hey you, over here");
+console.log(db);
 
-// mongoose.connect("mongodb://localhost:27017/loveTest");
-// var db = mongoose.connection;
+db.on('error', function (err) {
+  console.log('Mongoose Error: ', err);
+});
 
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-// 	console.log("we're connected!!!!!!!");
-// })
+db.once('open', function() {
+	console.log("MongoDB is connected!!!!!!!");
+})
+
 var User = require('./models/user');
 
-// *******************
+// *******************  routes
 
 require('./routes/routes.js')(app);
 
- app.get('/', function(req, res) {
-            res.render('home');
-        });
+ // app.get('/', function(req, res) {
+ //            res.render('home');
+ //        });
+
+ //******************** listener
 var port = process.env.PORT || 3000;
 
 app.listen(port, function(){
